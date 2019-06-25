@@ -4,16 +4,19 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+{% load static %}
+{% load widget_tweaks %}
+
 <!DOCTYPE html>
 <html>
 <head>
 <title>New Store A Ecommerce Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
 <!-- Custom Theme files -->
 <!--theme-style-->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />	
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -24,10 +27,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'><!--//fonts-->
 <!-- start menu -->
-<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="js/memenu.js"></script>
+<link href="{% static 'css/memenu.css' %}" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="{% static 'js/memenu.js' %}"></script>
 <script>$(document).ready(function(){$(".memenu").memenu();});</script>
-<script src="js/simpleCart.min.js"> </script>
+<script src="{% static 'js/simpleCart.min.js' %}"> </script>
 </head>
 <body>
 <!--header-->
@@ -50,7 +53,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<a href="checkout.html">
 						<h3> <div class="total">
 							<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-							<img src="images/cart.png" alt=""/></h3>
+							<img src="{% static 'images/cart.png' %}" alt=""/></h3>
 						</a>
 						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 
@@ -63,7 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="head-top">
 				<div class="logo">
-					<a href="index.html"><img src="images/logo.png" alt=""></a>	
+					<a href="index.html"><img src="{% static 'images/logo.png' %}" alt=""></a>	
 				</div>
 		  <div class=" h_menu4">
 				<ul class="memenu skyblue">
@@ -193,7 +196,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	<div class="banner">
 		<div class="container">
-			  <script src="js/responsiveslides.min.js"></script>
+			  <script src="{% static 'js/responsiveslides.min.js' %}"></script>
   <script>
     $(function () {
       $("#slider").responsiveSlides({
@@ -248,7 +251,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<h1>NEW RELEASED</h1>
 		<div class="grid-in">
 			<div class="col-md-4 grid-top">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/pi.jpg" alt="">
+				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/pi.jpg' %}" alt="">
 							<div class="b-wrapper">
 									<h3 class="b-animate b-from-left    b-delay03 ">
 										<span>T-Shirt</span>	
@@ -260,7 +263,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<p><a href="single.html">Contrary to popular</a></p>
 			</div>
 			<div class="col-md-4 grid-top">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/pi1.jpg" alt="">
+				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/pi1.jpg' %}" alt="">
 					<div class="b-wrapper">
 									<h3 class="b-animate b-from-left    b-delay03 ">
 										<span>Shoe</span>	
@@ -270,7 +273,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<p><a href="single.html">classical Latin</a></p>
 			</div>
 			<div class="col-md-4 grid-top">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/pi2.jpg" alt="">
+				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/pi2.jpg' %}" alt="">
 					<div class="b-wrapper">
 									<h3 class="b-animate b-from-left    b-delay03 ">
 										<span>Bag</span>	
@@ -283,7 +286,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="grid-in">
 			<div class="col-md-4 grid-top">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/pi3.jpg" alt="">
+				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/pi3.jpg' %}" alt="">
 					<div class="b-wrapper">
 									<h3 class="b-animate b-from-left    b-delay03 ">
 										<span>Shirt</span>	
@@ -293,7 +296,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<p><a href="single.html">suffered alteration</a></p>
 			</div>
 			<div class="col-md-4 grid-top">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/pi4.jpg" alt="">
+				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/pi4.jpg' %}" alt="">
 					<div class="b-wrapper">
 									<h3 class="b-animate b-from-left    b-delay03 ">
 										<span>Bag</span>	
@@ -303,7 +306,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<p><a href="single.html">Content here</a></p>
 			</div>
 			<div class="col-md-4 grid-top">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/pi5.jpg" alt="">
+				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/pi5.jpg' %}" alt="">
 					<div class="b-wrapper">
 									<h3 class="b-animate b-from-left    b-delay03 ">
 										<span>Shoe</span>	
@@ -320,7 +323,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="content-top-bottom">
 		<h2>Featured Collections</h2>
 		<div class="col-md-6 men">
-			<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/t1.jpg" alt="">
+			<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/t1.jpg' %}" alt="">
 				<div class="b-wrapper">
 									<h3 class="b-animate b-from-top top-in   b-delay03 ">
 										<span>Lorem</span>	
@@ -332,7 +335,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="col-md-6">
 			<div class="col-md1 ">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/t2.jpg" alt="">
+				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/t2.jpg' %}" alt="">
 					<div class="b-wrapper">
 									<h3 class="b-animate b-from-top top-in1   b-delay03 ">
 										<span>Lorem</span>	
@@ -343,7 +346,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="col-md2">
 				<div class="col-md-6 men1">
-					<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/t3.jpg" alt="">
+					<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/t3.jpg' %}" alt="">
 							<div class="b-wrapper">
 									<h3 class="b-animate b-from-top top-in2   b-delay03 ">
 										<span>Lorem</span>	
@@ -353,7 +356,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
 				</div>
 				<div class="col-md-6 men2">
-					<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/t4.jpg" alt="">
+					<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/t4.jpg' %}" alt="">
 							<div class="b-wrapper">
 									<h3 class="b-animate b-from-top top-in2   b-delay03 ">
 										<span>Lorem</span>	
@@ -371,12 +374,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!---->
 	<div class="content-bottom">
 		<ul>
-			<li><a href="#"><img class="img-responsive" src="images/lo.png" alt=""></a></li>
-			<li><a href="#"><img class="img-responsive" src="images/lo1.png" alt=""></a></li>
-			<li><a href="#"><img class="img-responsive" src="images/lo2.png" alt=""></a></li>
-			<li><a href="#"><img class="img-responsive" src="images/lo3.png" alt=""></a></li>
-			<li><a href="#"><img class="img-responsive" src="images/lo4.png" alt=""></a></li>
-			<li><a href="#"><img class="img-responsive" src="images/lo5.png" alt=""></a></li>
+			<li><a href="#"><img class="img-responsive" src="{% static 'images/lo.png' %}" alt=""></a></li>
+			<li><a href="#"><img class="img-responsive" src="{% static 'images/lo1.png' %}" alt=""></a></li>
+			<li><a href="#"><img class="img-responsive" src="{% static 'images/lo2.png' %}" alt=""></a></li>
+			<li><a href="#"><img class="img-responsive" src="{% static 'images/lo3.png' %}" alt=""></a></li>
+			<li><a href="#"><img class="img-responsive" src="{% static 'images/lo4.png' %}" alt=""></a></li>
+			<li><a href="#"><img class="img-responsive" src="{% static 'images/lo5.png' %}" alt=""></a></li>
 		<div class="clearfix"> </div>
 		</ul>
 	</div>
