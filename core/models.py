@@ -1,6 +1,9 @@
 from django.db import models
 
 # Create your models here.
+class Genero(models.Model):
+    genero = models.CharField('Gênero', max_length=200)
+
 class Livro(models.Model):
     titulo = models.CharField('Título', max_length=50)
     autor = models.CharField('Autor', max_length=100)
@@ -9,5 +12,4 @@ class Livro(models.Model):
     capa = models.ImageField('capa', upload_to='capas')
     generoFK = models.ManyToManyField(Genero)
 
-class Genero (models.Model):
-    genero = models.CharField('Gênero', max_length=200)
+
