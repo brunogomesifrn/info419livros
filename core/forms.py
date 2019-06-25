@@ -5,4 +5,9 @@ from .models import Livro
 class livroForm(ModelForm):
     class Meta():
         model = Livro
-        fields = ['Título', '', 'capa']
+        fields = ['Título', 'Autor', 'Preço', 'ISBN', 'Capa']
+
+class generoForm(ModelForm):
+    class Meta():
+        model = Genero
+        fields = ['Gênero']
