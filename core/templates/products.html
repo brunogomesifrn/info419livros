@@ -4,6 +4,8 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+{% extends 'index.html' %}
+
 {% load static %}
 {% load widget_tweaks %}
 
@@ -199,6 +201,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 <!--content-->
 <!---->
+{% block conteudo %}
+
 		<div class="product">
 			<div class="container">
 				<div class="col-md-3 product-price">
@@ -469,7 +473,7 @@ amet consectetuer </a></h6>
 		</div>
 			
 				<!---->
-
+{% endblock conteudo %}
 <!--//content-->
 <div class="footer">
 				<div class="container">

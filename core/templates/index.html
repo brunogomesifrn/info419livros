@@ -4,6 +4,7 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+
 {% load static %}
 {% load widget_tweaks %}
 
@@ -49,13 +50,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a  href="{% url 'cadastro' %}"  >Cadastro</a></li>
 
 					</ul>
-					<div class="">
+					<div class="cart box_1">
 						<a href="{% url 'produtos' %}">
 						<h3> <div class="total">
-							<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> Livros)</div>
-							
+							Livros</div>
+							</h3>
 						</a>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+						
 
 					</div>
 					<div class="clearfix"> </div>
@@ -193,6 +194,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 
 	</div>
+
+{% block conteudo %}
 
 	<div class="banner">
 		<div class="container">
@@ -384,6 +387,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</ul>
 	</div>
 </div>
+
+{% endblock conteudo %}
+
 <div class="footer">
 				<div class="container">
 			<div class="footer-top-at">
