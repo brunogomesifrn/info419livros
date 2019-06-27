@@ -22,10 +22,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="New Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script type="{& static 'application/x-javascript' %}"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--fonts-->
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'><!--//fonts-->
+<link href="{% static 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' %}" rel='stylesheet' type='text/css'>
+<link href="{% static 'http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' %}" rel='stylesheet' type='text/css'><!--//fonts-->
 <!-- start menu -->
 <link href="{% static 'css/memenu.css' %}" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="{% static 'js/memenu.js' %}"></script>
@@ -45,8 +45,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="header-left">		
 					<ul>
-						<li ><a href="login.html"  >Login</a></li>
-						<li><a  href="register.html"  >Register</a></li>
+						<li ><a href="{% url 'login' %}"  >Login</a></li>
+						<li><a  href="{% url 'cadastro' %}"  >Cadastro</a></li>
 
 					</ul>
 					<div class="cart box_1">
