@@ -17,3 +17,5 @@ def generos(request):
 def produtos(request):
 	return render(request, 'products.html')	
 
+def livro_detalhes(request):
+	return render(request, 'single.html')
