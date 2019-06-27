@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core.views import inicial, cadastrar, login, genero
+from core.views import inicial, cadastrar, login, produtos
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,5 +25,6 @@ urlpatterns = [
     path('cadastro/', cadastrar, name='cadastro'),
     path('login/', login, name='login'),
     path('generos/', generos, name='generos'),
+    path('produtos/', produtos, name='produtos'),
 
 ]

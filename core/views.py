@@ -9,6 +9,11 @@ def cadastrar(request):
 def login(request):
 	return render(request, 'login.html')
 
+
 def generos(request):
 	return render(request, 'generos.html')	
+
+
+def produtos(request):
+	return render(request, 'products.html')	
 
