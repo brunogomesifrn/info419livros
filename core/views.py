@@ -19,3 +19,7 @@ def produtos(request):
 
 def livro_detalhes(request):
 	return render(request, 'single.html')
+
+def genero_cadastrar(request):
+	return render(request, 'generos_cadastrar.html')
+	
