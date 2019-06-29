@@ -24,7 +24,7 @@ urlpatterns = [
     path('', inicial, name='inicial'),
 
     path('cadastro/', cadastrar, name='cadastro'),
-    path('login/', login, name='login'),
+    path('login/', auth_views.LogoutView.as_view(), name='login'),
 
     path('generos/', generos, name='generos'),
     path('produtos/', produtos, name='produtos'),
