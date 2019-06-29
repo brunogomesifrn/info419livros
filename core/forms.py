@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Livro
+from .models import Livro, Genero
 
 class livroForm(ModelForm):
     class Meta():
