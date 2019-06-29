@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import inicial, cadastrar, login, generos, produtos, livro_detalhes
+from core.views import inicial, cadastrar, login, generos, produtos, livro_detalhes, perfil
 from django.contrib.auth import views as auth_views
 
 
@@ -25,6 +25,7 @@ urlpatterns = [
 
     path('cadastro/', cadastrar, name='cadastro'),
     path('login/', auth_views.LogoutView.as_view(), name='login'),
+    path('perfil/', perfil, name='perfil'),
 
     path('generos/', generos, name='generos'),
     path('produtos/', produtos, name='produtos'),

@@ -1,0 +1,69 @@
+{% extends 'index.html' %}
+
+{% load static %}
+{% load widget_tweaks %}
+
+
+
+{% block conteudo %}
+
+<style type="text/css">
+
+.produtos {
+	font-family: sans-serif;
+	text-align: center;
+	font-weight: 600;
+	font-size: 25px;
+	color: white;
+}
+
+.centro {
+	text-align: center;
+	padding: 15px;
+	margin-top: 50px;
+	background-color: orange;
+	border: none;
+	border-radius: 25px
+}
+
+.produtos:hover {
+	color: lightgray;
+	text-decoration: none;
+}
+
+.afastar {
+	margin-bottom: 100px;
+
+}
+
+.baixar {
+	margin-top: 100px
+
+}
+
+.produtos:onclick {
+	text-decoration: none;
+	color: lightgray;
+}
+
+.produtos:visited {
+	text-decoration: none;
+	color: white;
+}
+
+
+</style>
+
+
+<div class="container">
+
+	<p class="centro baixar"> <a href="#" class="produtos"> Meus dados </a> </p>
+	
+	<p class="centro"> <a href="{% url 'generos' %}" class="produtos"> Gêneros </a> </p>
+
+	<p class="centro afastar"> <a href="#" class="produtos"> Livros </a> </p>
+
+</div>
+
+
+{% endblock %}

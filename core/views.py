@@ -29,3 +29,5 @@ def livro_detalhes(request):
 def genero_cadastrar(request):
 	return render(request, 'generos_cadastrar.html')
 	
+def perfil(request):
+	return render(request, 'perfil.html')	
