@@ -3,8 +3,6 @@
 {% load static %}
 {% load widget_tweaks %}
 
-
-
 {% block conteudo %}
 
 <style type="text/css">
@@ -33,12 +31,10 @@
 
 .afastar {
 	margin-bottom: 100px;
-
 }
 
 .baixar {
 	margin-top: 100px
-
 }
 
 .produtos:onclick {
@@ -51,17 +47,13 @@
 	color: white;
 }
 
-
 </style>
 
-
 <div class="container">
-
-	<p class="centro baixar"> <a href="#" class="produtos"> Meus dados </a> </p>
-	
+	<p class="centro baixar"> <a href="{% url 'meus_dados' user.id %}" class="produtos"> Meus dados </a> </p>
 	<p class="centro"> <a href="{% url 'generos' %}" class="produtos"> Gêneros </a> </p>
-
-	<p class="centro afastar"> <a href="#" class="produtos"> Livros </a> </p>
+	<p class="centro"> <a href="#" class="produtos"> Livros </a> </p>
+	<p class="centro afastar"> <a href={% url 'logout' %} class="produtos"> Logout </a> </p>
 
 </div>
 
