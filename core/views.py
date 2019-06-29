@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Livro, Genero
 
 def inicial(request):
 	return render(request, 'index.html')
@@ -15,7 +16,12 @@ def generos(request):
 
 
 def produtos(request):
-	return render(request, 'products.html')	
+	livros = Livro.objects.all()
+	contexto = {
+	'lista_livros': livros
+	}
+
+	return render(request, 'products.html', contexto)	
 
 def livro_detalhes(request):
 	return render(request, 'single.html')
