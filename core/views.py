@@ -39,7 +39,12 @@ def login(request):
 # -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
 def generos(request):
-	return render(request, 'generos.html')
+	generos = Genero.objects.all()
+	contexto = {
+	'lista_generos': generos
+	}
+
+	return render(request, 'generos.html', contexto)
 
 def produtos(request):
 	livros = Livro.objects.all()
