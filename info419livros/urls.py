@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from core.views import inicial, cadastrar, login, generos, produtos, livro_detalhes
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', inicial, name='inicial'),
