@@ -16,13 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core.views import inicial, cadastrar, login, generos, produtos, livro_detalhes
+from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', inicial, name='inicial'),
+
     path('cadastro/', cadastrar, name='cadastro'),
     path('login/', login, name='login'),
+
     path('generos/', generos, name='generos'),
     path('produtos/', produtos, name='produtos'),
     path('livro_detalhes/', livro_detalhes, name='livro_detalhes'),
