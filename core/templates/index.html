@@ -33,6 +33,35 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script type="text/javascript" src="{% static 'js/memenu.js' %}"></script>
 	<script>$(document).ready(function(){$(".memenu").memenu();});</script>
 	<script src="{% static 'js/simpleCart.min.js' %}"> </script>
+
+	<style type="text/css">
+		.tamanho {
+			height: 350px 
+
+		}
+
+		.tamanho2 {
+			height: 429px;
+			width: 600px
+		}
+
+		.tamanho3 {
+			height: 196px;
+			width: 255px;
+		}
+
+		.tamanho4 {
+			height: 190px;
+			width: 600px
+		}
+
+		.tamanho5 {
+			width: 200px;
+			height: 150px;
+		}
+
+	</style>
+
 </head>
 <body>
 	<!--header-->
@@ -41,8 +70,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="container">
 				<div class="search">
 					<form>
-						<input type="text" value="Search " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-						<input type="submit" value="Go">
+						<input type="text" value="Pesquise" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+						<input type="submit" value="Ir">
 					</form>
 				</div>
 
@@ -257,72 +286,70 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="content">
 		<div class="container">
 			<div class="content-top">
-				<h1>NEW RELEASED</h1>
+				<h1>GÊNEROS</h1>
 				<div class="grid-in">
 					<div class="col-md-4 grid-top">
-						<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/pi.jpg' %}" alt="">
+						<a href="#" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive tamanho" src="{% static 'images/pi.jpg' %}" alt="">
 							<div class="b-wrapper">
 								<h3 class="b-animate b-from-left    b-delay03 ">
-									<span>T-Shirt</span>
+									<span>Aventura</span>
 								</h3>
 							</div>
 						</a>
 
-
-						<p><a href="single.html">Contrary to popular</a></p>
 					</div>
 					<div class="col-md-4 grid-top">
-						<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/pi1.jpg' %}" alt="">
+						<a href="#" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive tamanho" src="{% static 'images/romance.jpg' %}" alt="">
 							<div class="b-wrapper">
 								<h3 class="b-animate b-from-left    b-delay03 ">
-									<span>Shoe</span>
+									<span>Romance</span>
 								</h3>
 							</div>
 						</a>
-						<p><a href="single.html">classical Latin</a></p>
+						
 					</div>
 					<div class="col-md-4 grid-top">
-						<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/pi2.jpg' %}" alt="">
+						<a href="#" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive tamanho" src="{% static 'images/acao.jpg' %}" alt="">
 							<div class="b-wrapper">
 								<h3 class="b-animate b-from-left    b-delay03 ">
-									<span>Bag</span>
+									<span>Ação</span>
 								</h3>
 							</div>
 						</a>
-						<p><a href="single.html">undoubtable</a></p>
+						
 					</div>
 					<div class="clearfix"> </div>
 				</div>
 				<div class="grid-in">
 					<div class="col-md-4 grid-top">
-						<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/pi3.jpg' %}" alt="">
+						<a href="#" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive tamanho" src="{% static 'images/comedia.jpg' %}" alt="">
 							<div class="b-wrapper">
 								<h3 class="b-animate b-from-left    b-delay03 ">
-									<span>Shirt</span>
+									<span>Comédia</span>
 								</h3>
 							</div>
 						</a>
-						<p><a href="single.html">suffered alteration</a></p>
+						
 					</div>
 					<div class="col-md-4 grid-top">
-						<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/pi4.jpg' %}" alt="">
+						<a href="#" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive tamanho" src="{% static 'images/terror.jpg' %}" alt="">
 							<div class="b-wrapper">
 								<h3 class="b-animate b-from-left    b-delay03 ">
-									<span>Bag</span>
+									<span>Terror</span>
 								</h3>
 							</div>
 						</a>
-						<p><a href="single.html">Content here</a></p>
+						
 					</div>
 					<div class="col-md-4 grid-top">
-						<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/pi5.jpg' %}" alt="">
+						<a href="#" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive tamanho" src="{% static 'images/ficcaocientifica.jpg' %}" alt="">
 							<div class="b-wrapper">
 								<h3 class="b-animate b-from-left    b-delay03 ">
-									<span>Shoe</span>
+									<span>Ficção Científica</span>
 								</h3>
 							</div>
 						</a>
-						<p><a href="single.html">readable content</a></p>
+						
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -330,12 +357,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<!----->
 
 			<div class="content-top-bottom">
-				<h2>Featured Collections</h2>
+				<h2>AUTORES</h2>
 				<div class="col-md-6 men">
-					<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/t1.jpg' %}" alt="">
+					<a href="#" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive tamanho2" src="{% static 'images/autora1.jpg' %}" alt="">
 						<div class="b-wrapper">
 							<h3 class="b-animate b-from-top top-in   b-delay03 ">
-								<span>Lorem</span>
+								<span>Suzanne Collins</span>
 							</h3>
 						</div>
 					</a>
@@ -344,10 +371,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				<div class="col-md-6">
 					<div class="col-md1 ">
-						<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/t2.jpg' %}" alt="">
+						<a href="#" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive tamanho4" src="{% static 'images/autora4.jpg' %}" alt="">
 							<div class="b-wrapper">
 								<h3 class="b-animate b-from-top top-in1   b-delay03 ">
-									<span>Lorem</span>
+									<span>Sara Shepard</span>
 								</h3>
 							</div>
 						</a>
@@ -355,20 +382,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<div class="col-md2">
 						<div class="col-md-6 men1">
-							<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/t3.jpg' %}" alt="">
+							<a href="#" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive tamanho3" src="{% static 'images/autor2.jpg' %}" alt="">
 								<div class="b-wrapper">
 									<h3 class="b-animate b-from-top top-in2   b-delay03 ">
-										<span>Lorem</span>
+										<span>Nicholas Sparks</span>
 									</h3>
 								</div>
 							</a>
 
 						</div>
 						<div class="col-md-6 men2">
-							<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{% static 'images/t4.jpg' %}" alt="">
+							<a href="#" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive tamanho3" src="{% static 'images/autor3.jpg' %}" alt="">
 								<div class="b-wrapper">
 									<h3 class="b-animate b-from-top top-in2   b-delay03 ">
-										<span>Lorem</span>
+										<span>John Green</span>
 									</h3>
 								</div>
 							</a>
@@ -383,12 +410,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!---->
 		<div class="content-bottom">
 			<ul>
-				<li><a href="#"><img class="img-responsive" src="{% static 'images/lo.png' %}" alt=""></a></li>
-				<li><a href="#"><img class="img-responsive" src="{% static 'images/lo1.png' %}" alt=""></a></li>
-				<li><a href="#"><img class="img-responsive" src="{% static 'images/lo2.png' %}" alt=""></a></li>
-				<li><a href="#"><img class="img-responsive" src="{% static 'images/lo3.png' %}" alt=""></a></li>
-				<li><a href="#"><img class="img-responsive" src="{% static 'images/lo4.png' %}" alt=""></a></li>
-				<li><a href="#"><img class="img-responsive" src="{% static 'images/lo5.png' %}" alt=""></a></li>
+				<li><a href="#"><img class="img-responsive tamanho5" src="{% static 'images/saraiva.jpg' %}" alt=""></a></li>
+				<li><a href="#"><img class="img-responsive tamanho5" src="{% static 'images/amazon.png' %}" alt=""></a></li>
+				<li><a href="#"><img class="img-responsive tamanho5" src="{% static 'images/intrisica.png' %}" alt=""></a></li>
+				<li><a href="#"><img class="img-responsive tamanho5" src="{% static 'images/rocco.png' %}" alt=""></a></li>
+				<li><a href="#"><img class="img-responsive tamanho5" src="{% static 'images/seguinte.jpg' %}" alt=""></a></li>
+				<li><a href="#"><img class="img-responsive tamanho5" src="{% static 'images/arqueiro.png' %}" alt=""></a></li>
 				<div class="clearfix"> </div>
 			</ul>
 		</div>
@@ -401,22 +428,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="footer-top-at">
 
 				<div class="col-md-4 amet-sed">
-					<h4>MORE INFO</h4>
+					<h4>MAIS INFORMAÇÕES</h4>
 					<ul class="nav-bottom">
-						<li><a href="#">How to order</a></li>
+						<li><a href="#">Como pedir</a></li>
 						<li><a href="#">FAQ</a></li>
-						<li><a href="contact.html">Location</a></li>
-						<li><a href="#">Shipping</a></li>
-						<li><a href="#">Membership</a></li>
+						<li><a href="#">Localização</a></li>
+						<li><a href="#">Remessa</a></li>
+						<li><a href="#">Filiação</a></li>
 					</ul>
 				</div>
 				<div class="col-md-4 amet-sed ">
-					<h4>CONTACT US</h4>
+					<h4>NOS CONTATE</h4>
 
 					<p>
-						Contrary to popular belief</p>
-						<p>The standard chunk</p>
-						<p>office:  +12 34 995 0792</p>
+						Facebook</p>
+						<p>Instagram</p>
+						<p>E-mail</p>
 						<ul class="social">
 							<li><a href="#"><i> </i></a></li>
 							<li><a href="#"><i class="twitter"> </i></a></li>
@@ -426,9 +453,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</ul>
 					</div>
 					<div class="col-md-4 amet-sed">
-						<h4>Newsletter</h4>
-						<p>Sign Up to get all news update
-							and promo</p>
+						<h4>SE INSCREVA</h4>
+						<p>Inscreva-se para receber todas as novidades e promoções</p>
 							<form>
 								<input type="text" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
 								<input type="submit" value="Sign up">
@@ -438,7 +464,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>
 				<div class="footer-class">
-					<p >© 2015 New store All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+					<p >© 2019 Todos os Direitos Reservados | Desenvolvido por Eduarda Alcântara, Semaias Rangel e Alexandra Marcelino </p>
 				</div>
 			</div>
 		</body>
