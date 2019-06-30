@@ -3,6 +3,7 @@ from .models import Livro, Genero
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from .forms import generoForm, livroForm
 
 def inicial(request):
 	return render(request, 'index.html')
@@ -58,4 +59,27 @@ def livro_detalhes(request):
 	return render(request, 'single.html')
 
 def genero_cadastrar(request):
-	return render(request, 'generos_cadastrar.html')
+	form = generoForm(request.POST or None, request.FILES or None)
+	if form.is_valid():
+		form.save()
+		return redirect('generos')
+	
+	form = generoForm()
+	contexto = {
+		'form': form
+		}	
+
+	return render(request, 'generos_cadastrar.html', contexto)
+
+def livro_cadastrar(request):
+	form = livroForm(request.POST or None, request.FILES or None)
+	if form.is_valid():
+		form.save()
+		return redirect('livros')
+	
+	form = livroForm()
+	contexto = {
+		'form': form
+		}	
+
+	return render(request, 'livros_cadastrar.html', contexto)	

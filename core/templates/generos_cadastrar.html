@@ -10,13 +10,14 @@
 		<form>
 			<div class="col-md-6 register-top-grid">
 				<h3>cadastrar genero</h3>
+				
 				<div>
 					<span>First Name</span>
-					<input type="text">
+					{{ form.genero | add_class:"form-control" }}
 				</div>
 
 				<div>
-					<button type="button" class="btn btn-primary btn-lg">Large button</button>
+					<button type="submit" class="btn btn-primary btn-lg">Large button</button>
 				</div>
 		
 {% endblock conteudo %}
