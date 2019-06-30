@@ -1,4 +1,4 @@
-<!--A Design by W3layouts 
+<!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
@@ -14,60 +14,130 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 {% block conteudo %}
 
-	<style type="text/css">
-	
-.produtos {
-	font-family: sans-serif;
+<style type="text/css">
+
+.texto {
+	font-family: Ubuntu;
 	text-align: center;
-	font-weight: 600;
+	font-weight: bolder;
 	font-size: 25px;
 	color: white;
 }
 
+.outroTexto{
+	font-family: Ubuntu;
+	text-align: left;
+	font-weight: bolder;
+	font-size: 25px;
+	color: black;
+}
+
 .centro {
 	text-align: center;
-	padding: 15px;
-	margin-top: 50px;
-	background-color: orange;
-	border: none;
-	border-radius: 25px
 }
 
 .botao {
-	text-align: right;
-	padding-left: 60px
+	text-align: center;
+	position: relative;
+	border: none;
+	border-radius: 25px;
+	padding: 10px;
+	color: white;
+	background-color: darkorange;
+	font-size: 20px;
+	font-weight: 900
+}
+
+.genero{
+	font-family: Ubuntu;
+	text-align: left;
+	font-size: 25px;
+	font-weight: bold;
+	color: black;
+	margin-top: 15px;
+}
+
+.pEditar{
+	margin-left: 400px
+}
+
+.pEditar2{
+	margin-left: 10px
 }
 
 .baixar {
 	margin-top: 50px;
-
 }
 
-	</style>	
+.separador {
+	margin-bottom: 75px
+}
 
-		<div class="container"> 
-		  <div class="col-md-6 cart-total">
-		  	<h2 class="baixar"> Gêneros </h2>
+.cadastrar{
+	text-align: center;
+	padding: 10px;
+	background-color: orange;
+	border: none;
+	border-radius: 25px;
+	font-family: Ubuntu;
+	text-align: center;
+	font-weight: bold;
+	font-size: 25px;
+	color: white;
+}
 
-			 
-			 {% for genero in lista_generos %}
-			 {{ genero.genero }} <p class="botao"><a href="{% url 'genero_editar' genero.id %}"><button type="button" class="produtos centro">Editar</button></a></p> <p class="botao"><a href="{% url 'genero_remover' genero.id %}"><button type="button" class="produtos centro">Excluir</button></a></p>
-			</br>
+.cadastrar:hover{
+	background-color: darkorange;
+	font-size: 25px;
+	font-weight: bolder;
+	transition: 0.5s
+}
 
-			 {% empty %}
-			 
-			 <h2 class=""> Nenhum gênero cadastrado </h2>
+h1{
+	font-weight: bold;
+	font-family: Ubuntu;
+	color: black;
+	text-align: left;
+}
 
+</style>
 
-			 {% endfor %}
+<div class="container baixar">
+	<div class="row separador">
+		<div class="col-md-9 cart-total">
+			{% if lista_generos %}
+			<h1> Gêneros </h1>
+			{% endif %}
+			{% for genero in lista_generos %}
 
-			 <p class="botao"><a href="{% url 'genero_cadastrar' %}"><button type="button" class="produtos centro">Cadastrar Gênero</button></a></p>
-			</div>
-		
-	 </div>
+			<p class="genero">
+				{{ genero.genero }}
+				<a href="{% url 'genero_editar' genero.id %}" class="pEditar">
+					<button type="button" class="botao">Editar</button>
+				</a>
+				<a href="{% url 'genero_remover' genero.id %}" class="pEditar2">
+					<button type="button" class="botao">Excluir</button>
+				</a>
+			</p>
+
+			{% empty %}
+
+			<h2 class="outroTexto"> Nenhum gênero cadastrado </h2>
+
+			{% endfor %}
+		</div>
+		<div class="col-md-3 col-lg-3 baixar">
+			<p class="botao">
+				<a href="{% url 'genero_cadastrar' %}">
+					<button type="button" class="cadastrar">Cadastrar Gênero</button>
+				</a>
+			</p>
+		</div>
+	</div>
+</div>
+
+<p class="baixar"></p>
 
 {% endblock %}
 
 <!--//content-->
-
-			
