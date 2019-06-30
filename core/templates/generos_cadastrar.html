@@ -7,17 +7,22 @@
 <div class=" container">
 	<div class=" register">
 		<h1>Gêneros</h1>
-		<form>
+		<form method="POST">
+			{% csrf_token %}
 			<div class="col-md-6 register-top-grid">
-				<h3>cadastrar genero</h3>
+				<h3>cadastrar gênero:</h3>
 				
 				<div>
-					<span>First Name</span>
+					
 					{{ form.genero | add_class:"form-control" }}
 				</div>
 
 				<div>
-					<button type="submit" class="btn btn-primary btn-lg">Large button</button>
+					<button type="submit" class="btn btn-primary btn-lg" id="sendMessageButton">Salvar</button>
 				</div>
+			</div>
+		</form>
+	</div>
+</div>
 		
 {% endblock conteudo %}

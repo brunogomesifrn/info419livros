@@ -68,9 +68,27 @@ def genero_cadastrar(request):
 	form = generoForm()
 	contexto = {
 		'form': form
-		}	
+	}	
 
 	return render(request, 'generos_cadastrar.html', contexto)
+
+
+def genero_editar(request, id):
+	genero_edt = Genero.objects.get(pk=id)
+	form = generoForm(request.POST or None, request.FILES or None, instance=genero_edt)
+	if form.is_valid():
+		form.save()
+		return redirect('generos')
+	contexto = {
+		'form': form
+	}
+
+	return render(request, 'generos_cadastrar.html', contexto)
+
+def genero_remover(request, id):
+	genero_rem = Genero.objects.get(pk=id)
+	genero_rem.delete()
+	return redirect('generos')	
 
 def livro_cadastrar(request):
 	form = livroForm(request.POST or None, request.FILES or None)
