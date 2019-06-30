@@ -60,6 +60,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			height: 150px;
 		}
 
+		
+
 	</style>
 
 </head>
@@ -102,125 +104,99 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container">
 			<div class="head-top">
 				<div class="logo">
-					<a href="index.html"><img src="{% static 'images/logo.png' %}" alt=""></a>
+					<a href="{% url 'inicial' %}"><img src="{% static 'images/logo.png' %}" alt=""></a>
 				</div>
 				<div class=" h_menu4">
 					<ul class="memenu skyblue">
-						<li class="active grid"><a class="color8" href="index.html">Home</a></li>
-						<li><a class="color1" href="#">Men</a>
+						<li class="active grid"><a class="color8" href="{% url 'inicial' %}">Home</a></li>
+						<li><a class="color1" href="#">Lançamentos</a>
 							<div class="mepanel">
 								<div class="row">
 									<div class="col1">
 										<div class="h_nav">
 											<ul>
-												<li><a href="products.html">Accessories</a></li>
-												<li><a href="products.html">Bags</a></li>
-												<li><a href="products.html">Caps & Hats</a></li>
-												<li><a href="products.html">Hoodies & Sweatshirts</a></li>
-												<li><a href="products.html">Jackets & Coats</a></li>
-												<li><a href="products.html">Jeans</a></li>
-												<li><a href="products.html">Jewellery</a></li>
-												<li><a href="products.html">Jumpers & Cardigans</a></li>
-												<li><a href="products.html">Leather Jackets</a></li>
-												<li><a href="products.html">Long Sleeve T-Shirts</a></li>
-												<li><a href="products.html">Loungewear</a></li>
+												<li><a href="#">Aventura</a></li>
+												<li><a href="#">Romance</a></li>
+												<li><a href="#">Ação</a></li>
+												<li><a href="#">Suspense</a></li>
+												<li><a href="#">Comédia</a></li>
+												<li><a href="#">Drama</a></li>
+												<li><a href="#">Ficção Científica</a></li>
+												<li><a href="#">Terror</a></li>
+												<li><a href="#">Infantil</a></li>
+												<li><a href="#">Fantasia</a></li>
+												<li><a href="#">Biografia</a></li>
 											</ul>
 										</div>
 									</div>
 									<div class="col1">
 										<div class="h_nav">
 											<ul>
-												<li><a href="products.html">Shirts</a></li>
-												<li><a href="products.html">Shoes, Boots & Trainers</a></li>
-												<li><a href="products.html">Shorts</a></li>
-												<li><a href="products.html">Suits & Blazers</a></li>
-												<li><a href="products.html">Sunglasses</a></li>
-												<li><a href="products.html">Sweatpants</a></li>
-												<li><a href="products.html">Swimwear</a></li>
-												<li><a href="products.html">Trousers & Chinos</a></li>
-												<li><a href="products.html">T-Shirts</a></li>
-												<li><a href="products.html">Underwear & Socks</a></li>
-												<li><a href="products.html">Vests</a></li>
+												<li><a href="#">Jovem Adulto</a></li>
+												<li><a href="#">Didáticos</a></li>
+												<li><a href="#">Conto</a></li>
+												<li><a href="#">Crônica</a></li>
+												<li><a href="#">Poesia</a></li>
+												<li><a href="#">Política</a></li>
+												<li><a href="#">Infantojuvenil</a></li>
+												<li><a href="#">Crime</a></li>
+												<li><a href="#">Ficção</a></li>
+												<li><a href="#">Autoajuda</a></li>
+												<li><a href="#">Policial</a></li>
 											</ul>
 										</div>
 									</div>
 									<div class="col1">
-										<div class="h_nav">
-											<h4>Popular Brands</h4>
-											<ul>
-												<li><a href="products.html">Levis</a></li>
-												<li><a href="products.html">Persol</a></li>
-												<li><a href="products.html">Nike</a></li>
-												<li><a href="products.html">Edwin</a></li>
-												<li><a href="products.html">New Balance</a></li>
-												<li><a href="products.html">Jack & Jones</a></li>
-												<li><a href="products.html">Paul Smith</a></li>
-												<li><a href="products.html">Ray-Ban</a></li>
-												<li><a href="products.html">Wood Wood</a></li>
-											</ul>
-										</div>
+										
 									</div>
 								</div>
 							</div>
 						</li>
-						<li class="grid"><a class="color2" href="#">	Women</a>
+						<li class="grid"><a class="color2" href="#">	Mais vendidos</a>
 							<div class="mepanel">
 								<div class="row">
 									<div class="col1">
 										<div class="h_nav">
 											<ul>
-												<li><a href="products.html">Accessories</a></li>
-												<li><a href="products.html">Bags</a></li>
-												<li><a href="products.html">Caps & Hats</a></li>
-												<li><a href="products.html">Hoodies & Sweatshirts</a></li>
-												<li><a href="products.html">Jackets & Coats</a></li>
-												<li><a href="products.html">Jeans</a></li>
-												<li><a href="products.html">Jewellery</a></li>
-												<li><a href="products.html">Jumpers & Cardigans</a></li>
-												<li><a href="products.html">Leather Jackets</a></li>
-												<li><a href="products.html">Long Sleeve T-Shirts</a></li>
-												<li><a href="products.html">Loungewear</a></li>
+												<li><a href="#">Aventura</a></li>
+												<li><a href="#">Romance</a></li>
+												<li><a href="#">Ação</a></li>
+												<li><a href="#">Suspense</a></li>
+												<li><a href="#">Comédia</a></li>
+												<li><a href="#">Drama</a></li>
+												<li><a href="#">Ficção Científica</a></li>
+												<li><a href="#">Terror</a></li>
+												<li><a href="#">Infantil</a></li>
+												<li><a href="#">Fantasia</a></li>
+												<li><a href="#">Biografia</a></li>
 											</ul>
 										</div>
 									</div>
 									<div class="col1">
 										<div class="h_nav">
 											<ul>
-												<li><a href="products.html">Shirts</a></li>
-												<li><a href="products.html">Shoes, Boots & Trainers</a></li>
-												<li><a href="products.html">Shorts</a></li>
-												<li><a href="products.html">Suits & Blazers</a></li>
-												<li><a href="products.html">Sunglasses</a></li>
-												<li><a href="products.html">Sweatpants</a></li>
-												<li><a href="products.html">Swimwear</a></li>
-												<li><a href="products.html">Trousers & Chinos</a></li>
-												<li><a href="products.html">T-Shirts</a></li>
-												<li><a href="products.html">Underwear & Socks</a></li>
-												<li><a href="products.html">Vests</a></li>
+												<li><a href="#">Jovem Adulto</a></li>
+												<li><a href="#">Didáticos</a></li>
+												<li><a href="#">Conto</a></li>
+												<li><a href="#">Crônica</a></li>
+												<li><a href="#">Poesia</a></li>
+												<li><a href="#">Política</a></li>
+												<li><a href="#">Infantojuvenil</a></li>
+												<li><a href="#">Crime</a></li>
+												<li><a href="#">Ficção</a></li>
+												<li><a href="#">Autoajuda</a></li>
+												<li><a href="#">Policial</a></li>
 											</ul>
 										</div>
 									</div>
 									<div class="col1">
-										<div class="h_nav">
-											<h4>Popular Brands</h4>
-											<ul>
-												<li><a href="products.html">Levis</a></li>
-												<li><a href="products.html">Persol</a></li>
-												<li><a href="products.html">Nike</a></li>
-												<li><a href="products.html">Edwin</a></li>
-												<li><a href="products.html">New Balance</a></li>
-												<li><a href="products.html">Jack & Jones</a></li>
-												<li><a href="products.html">Paul Smith</a></li>
-												<li><a href="products.html">Ray-Ban</a></li>
-												<li><a href="products.html">Wood Wood</a></li>
-											</ul>
-										</div>
+										
 									</div>
 								</div>
 							</div>
 						</li>
-						<li><a class="color4" href="blog.html">Blog</a></li>
-						<li><a class="color6" href="contact.html">Conact</a></li>
+						<li><a class="color4" href="#">Ofertas do dia</a></li>
+						<li><a class="color6" href="#">Contato</a></li>
 					</ul>
 				</div>
 
@@ -251,18 +227,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<li>
 
 						<div class="banner-text">
-							<h3>Lorem Ipsum is not simply dummy  </h3>
+							<h3>Encontre os melhores livros </h3>
 							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor .</p>
-							<a href="single.html">Learn More</a>
+							<a href="#">Leia Mais</a>
 						</div>
 
 					</li>
 					<li>
 
 						<div class="banner-text">
-							<h3>There are many variations </h3>
+							<h3> Com os melhores preços </h3>
 							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor .</p>
-							<a href="single.html">Learn More</a>
+							<a href="#">Leia Mais</a>
 
 						</div>
 
@@ -271,7 +247,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="banner-text">
 							<h3>Sed ut perspiciatis unde omnis</h3>
 							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor .</p>
-							<a href="single.html">Learn More</a>
+							<a href="#">Leia Mais</a>
 
 						</div>
 

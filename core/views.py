@@ -51,7 +51,7 @@ def generos(request):
 def produtos(request):
 	livros = Livro.objects.all()
 	contexto = {
-	'lista_livros': livros
+		'lista_livros': livros
 	}
 
 	return render(request, 'products.html', contexto)
