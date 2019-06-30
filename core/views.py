@@ -3,7 +3,7 @@ from .models import Livro, Genero
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from .forms import generoForm, livroForm
+
 
 def inicial(request):
 	return render(request, 'index.html')
