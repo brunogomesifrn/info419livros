@@ -122,6 +122,7 @@ def livro_editar(request, id):
 		'form': form
 	}
 
+
 	return render(request, 'livros_cadastrar.html', contexto)
 
 def livro_remover(request, id):		
