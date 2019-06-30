@@ -30,7 +30,7 @@ def cadastrar(request):
 	form = UserCreationForm(request.POST or None)
 	if form.is_valid():
 		form.save()
-		return redirect(request, 'login')
+		return redirect('login')
 	var = {
 		'form': form
 	}
@@ -64,11 +64,11 @@ def genero_cadastrar(request):
 	if form.is_valid():
 		form.save()
 		return redirect('generos')
-	
+
 	form = generoForm()
 	contexto = {
 		'form': form
-	}	
+	}
 
 	return render(request, 'generos_cadastrar.html', contexto)
 
@@ -95,7 +95,7 @@ def livros(request):
 	contexto = {
 	'lista_livros': livros
 	}
-	
+
 	return render(request, 'livros.html', contexto)
 
 
@@ -104,13 +104,13 @@ def livro_cadastrar(request):
 	if form.is_valid():
 		form.save()
 		return redirect('livros')
-	
+
 	form = livroForm()
 	contexto = {
 		'form': form
-		}	
+		}
 
-	return render(request, 'livros_cadastrar.html', contexto)	
+	return render(request, 'livros_cadastrar.html', contexto)
 
 def livro_editar(request, id):
 	livro_edt = Livro.objects.get(pk=id)
@@ -125,7 +125,7 @@ def livro_editar(request, id):
 
 	return render(request, 'livros_cadastrar.html', contexto)
 
-def livro_remover(request, id):		
+def livro_remover(request, id):
 	livro_rem = Livro.objects.get(pk=id)
 	livro_rem.delete()
 	return redirect('livros')
