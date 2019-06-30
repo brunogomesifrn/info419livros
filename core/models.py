@@ -3,6 +3,8 @@ from django.db import models
 # Create your models here.
 class Genero(models.Model):
     genero = models.CharField('Gênero', max_length=200)
+    def __str__(self):
+    	return self.genero
 
 class Livro(models.Model):
     titulo = models.CharField('Título', max_length=50)

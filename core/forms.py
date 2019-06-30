@@ -10,4 +10,4 @@ class generoForm(ModelForm):
 class livroForm(ModelForm):
     class Meta():
         model = Livro
-        fields = ['titulo', 'autor', 'preco', 'isbn', 'capa']
+        fields = ['titulo', 'autor', 'generoFK', 'isbn', 'capa', 'preco']

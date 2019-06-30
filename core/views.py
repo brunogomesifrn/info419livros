@@ -88,7 +88,16 @@ def genero_editar(request, id):
 def genero_remover(request, id):
 	genero_rem = Genero.objects.get(pk=id)
 	genero_rem.delete()
-	return redirect('generos')	
+	return redirect('generos')
+
+def livros(request):
+	livros = Livro.objects.all()
+	contexto = {
+	'lista_livros': livros
+	}
+	
+	return render(request, 'livros.html', contexto)
+
 
 def livro_cadastrar(request):
 	form = livroForm(request.POST or None, request.FILES or None)
@@ -102,3 +111,20 @@ def livro_cadastrar(request):
 		}	
 
 	return render(request, 'livros_cadastrar.html', contexto)	
+
+def livro_editar(request, id):
+	livro_edt = Livro.objects.get(pk=id)
+	form = livroForm(request.POST or None, request.FILES or None, instance=livro_edt)
+	if form.is_valid():
+		form.save()
+		return redirect('livros')
+	contexto = {
+		'form': form
+	}
+
+	return render(request, 'livros_cadastrar.html', contexto)
+
+def livro_remover(request, id):		
+	livro_rem = Livro.objects.get(pk=id)
+	livro_rem.delete()
+	return redirect('livros')

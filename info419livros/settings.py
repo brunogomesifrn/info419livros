@@ -126,3 +126,7 @@ LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = 'perfil'
 
 LOGOUT_REDIRECT_URL = 'inicial'
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = 'media'

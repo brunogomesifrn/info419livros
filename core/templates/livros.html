@@ -1,1 +1,62 @@
-{% extends 'generos.html' %}
+{% extends 'index.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html>
+
+{% block conteudo %}
+
+	<style type="text/css">
+	
+.produtos {
+	font-family: sans-serif;
+	text-align: center;
+	font-weight: 600;
+	font-size: 25px;
+	color: white;
+}
+
+.centro {
+	text-align: center;
+	padding: 15px;
+	margin-top: 50px;
+	background-color: orange;
+	border: none;
+	border-radius: 25px
+}
+
+.botao {
+	text-align: right;
+	padding-left: 60px
+}
+
+.baixar {
+	margin-top: 50px;
+
+}
+
+	</style>	
+
+		<div class="container"> 
+		  <div class="col-md-6 cart-total">
+		  	<h2 class="baixar"> Livros </h2>
+
+			 
+			 {% for livro in lista_livros %}
+			 {{ livro.titulo }} <p class="botao"><a href="{% url 'livro_editar' livro.id %}"><button type="button" class="produtos centro">Editar</button></a></p> <p class="botao"><a href="{% url 'livro_remover' livro.id %}"><button type="button" class="produtos centro">Excluir</button></a></p>
+			</br>
+
+			 {% empty %}
+			 
+			 <h2 class=""> Nenhum livro cadastrado </h2>
+
+
+			 {% endfor %}
+
+			 <p class="botao"><a href="{% url 'livro_cadastrar' %}"><button type="button" class="produtos centro">Cadastrar Livro</button></a></p>
+			</div>
+		
+	 </div>
+
+{% endblock %}
