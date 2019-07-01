@@ -57,9 +57,9 @@
 		<form method="post">
 			{% csrf_token %}
 			<p class="centralizado">Usuário:</p>
-			<p class="centralizado">{{form.username | add_class:"borda"}}</p>
+			<p class="centralizado">{{form.username | add_class:"borda" }}</p>
 			<p class="centralizado">Senha:</p>
-			<p class="centralizado">{{form.password | add_class:"borda"}}</p>
+			<p class="centralizado">{{form.password | add_class:"borda" }}</p>
 
 			<p class="centralizado"><button type="submit" class="botiones">Login</button></p>
 		</form>
