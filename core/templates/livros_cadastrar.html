@@ -4,6 +4,47 @@
 
 {% block conteudo %}
 
+<style type="text/css">
+	
+.botao {
+	text-align: center;
+	position: relative;
+	border: none;
+	border-radius: 25px;
+	padding: 10px;
+	color: white;
+	background-color: darkorange;
+	font-size: 20px;
+	font-weight: 900
+}
+
+.direita{
+	text-align: right;
+}
+
+.baixar {
+	margin-top: 50px;
+}
+
+.baixar2 {
+	margin-top: 30px
+}
+
+.baixar3 {
+	margin-top: 20px;
+}
+
+.fonte {
+	font-family: Ubuntu;
+	font-size: 20px;
+	font-weight: 600;
+	font-style: italic;
+	color: darkorange;
+}
+
+
+</style>
+
 <div class=" container">
 	<div class=" register">
 		<h1>Livros</h1>
@@ -13,20 +54,21 @@
 				<h3>cadastrar livro:</h3>
 				
 				<div>
-					<p> Título: {{ form.titulo | add_class:"form-control" }} </p>
-					<p> Autor: {{ form.autor | add_class:"form-control" }} </p>
-					<p> Gênero: {{ form.generoFK }} </p>
-					<p> Isbn: {{ form.isbn | add_class:"form-control" }} </p>
-					<p> Capa: {{ form.capa | add_class:"form-control" }} </p>
-					<p> Preço: {{ form.preco | add_class:"form-control" }} </p>
+					<p class="baixar3 fonte"> Título: {{ form.titulo | add_class:"form-control" }} </p>
+					<p class="baixar3 fonte"> Autor: {{ form.autor | add_class:"form-control" }} </p>
+					<p class="baixar3 fonte"> Gênero: {{ form.generoFK }} </p>
+					<p class="baixar3 fonte"> Isbn: {{ form.isbn | add_class:"form-control" }} </p>
+					<p class="baixar3 fonte"> Capa: {{ form.capa | add_class:"form-control" }} </p>
+					<p class="baixar3 fonte"> Preço: {{ form.preco | add_class:"form-control" }} </p>
 				</div>
 
-				<div>
-					<button type="submit" class="btn btn-primary btn-lg" id="sendMessageButton">Salvar</button>
+				<div class="baixar2">
+					<p class="direita"><button type="submit" class="botao" id="sendMessageButton">Salvar</button> </p>
 				</div>
 			</div>
 		</form>
 	</div>
 </div>
+<p class="baixar"></p>
 		
 {% endblock conteudo %}		
