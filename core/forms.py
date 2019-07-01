@@ -11,3 +11,6 @@ class livroForm(ModelForm):
     class Meta():
         model = Livro
         fields = ['titulo', 'autor', 'generoFK', 'isbn', 'capa', 'preco']
+        widgets = {
+        	'generoFK': forms.CheckboxSelectMultiple()
+        }
