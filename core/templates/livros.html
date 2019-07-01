@@ -7,56 +7,130 @@
 
 {% block conteudo %}
 
-	<style type="text/css">
+<style type="text/css">
 	
-.produtos {
-	font-family: sans-serif;
+.texto {
+	font-family: Ubuntu;
 	text-align: center;
-	font-weight: 600;
+	font-weight: bolder;
 	font-size: 25px;
 	color: white;
 }
 
+.outroTexto{
+	font-family: Ubuntu;
+	text-align: left;
+	font-weight: bolder;
+	font-size: 25px;
+	color: black;
+}
+
 .centro {
 	text-align: center;
-	padding: 15px;
-	margin-top: 50px;
-	background-color: orange;
-	border: none;
-	border-radius: 25px
 }
 
 .botao {
-	text-align: right;
-	padding-left: 60px
+	text-align: center;
+	position: relative;
+	border: none;
+	border-radius: 25px;
+	padding: 10px;
+	color: white;
+	background-color: darkorange;
+	font-size: 20px;
+	font-weight: 900
+}
+
+.livro{
+	font-family: Ubuntu;
+	text-align: left;
+	font-size: 25px;
+	font-weight: bold;
+	color: black;
+	margin-top: 15px;
+}
+
+.pEditar{
+	margin-left: 400px
+}
+
+.pEditar2{
+	margin-left: 10px
 }
 
 .baixar {
 	margin-top: 50px;
-
 }
 
-	</style>	
+.separador {
+	margin-bottom: 75px
+}
 
-		<div class="container"> 
-		  <div class="col-md-6 cart-total">
-		  	<h2 class="baixar"> Livros </h2>
+.cadastrar{
+	text-align: center;
+	padding: 10px;
+	background-color: orange;
+	border: none;
+	border-radius: 25px;
+	font-family: Ubuntu;
+	text-align: center;
+	font-weight: bold;
+	font-size: 25px;
+	color: white;
+}
 
+.cadastrar:hover{
+	background-color: darkorange;
+	font-size: 25px;
+	font-weight: bolder;
+	transition: 0.5s
+}
+
+h1{
+	font-weight: bold;
+	font-family: Ubuntu;
+	color: black;
+	text-align: left;
+}
+
+</style>	
+
+<div class="container baixar">
+	<div class="row separador"> 	
+		<div class="col-md-9 cart-total">
+			{% if lista_livros %}
+		  	<h1> Livros </h1>
+		  	{% endif %}
+			{% for livro in lista_livros %}
+			
+			<p class="livro">
+				{{ livro.titulo }} 
+				 
+				<a href="{% url 'livro_editar' livro.id %}" class="pEditar">
+				 	<button type="button" class="botao">Editar</button></a>
+
+				<a href="{% url 'livro_remover' livro.id %}" class="pEditar2">
+				 	<button type="button" class="botao">Excluir</button></a>
+			</p>
+
+			{% empty %}
 			 
-			 {% for livro in lista_livros %}
-			 {{ livro.titulo }} <p class="botao"><a href="{% url 'livro_editar' livro.id %}"><button type="button" class="produtos centro">Editar</button></a></p> <p class="botao"><a href="{% url 'livro_remover' livro.id %}"><button type="button" class="produtos centro">Excluir</button></a></p>
-			</br>
-
-			 {% empty %}
-			 
-			 <h2 class=""> Nenhum livro cadastrado </h2>
+			<h2 class="outroTexto"> Nenhum livro cadastrado </h2>
 
 
 			 {% endfor %}
+		</div>
+		<div class="col-md-3 col-lg-3 baixar">
+				<p class="botao">
+					<a href="{% url 'livro_cadastrar' %}">
+						<button type="button" class="cadastrar">Cadastrar Livro</button></a>
+				</p>
+			
+		</div>
+	</div>
+</div>
 
-			 <p class="botao"><a href="{% url 'livro_cadastrar' %}"><button type="button" class="produtos centro">Cadastrar Livro</button></a></p>
-			</div>
-		
-	 </div>
+<p class="baixar"></p>
+
 
 {% endblock %}
