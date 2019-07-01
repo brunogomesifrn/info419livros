@@ -60,21 +60,46 @@
 
 .afastarTopo{	margin-top: 50px }
 .afastarTopo2{ margin-top: 20px }
+.afastarTopo3{ margin-top: 120px }
 .afastarBaixo{ margin-bottom: 50px }
+
+.listaSenha{
+	margin-top: 25px;
+	font-weight: 400;
+	letter-spacing: -1px;
+	list-style-type:none;
+}
 
 </style>
 
 <div class=" container">
-	<h1 class="centralizado2 afastarTopo">Cadastre-se</h1>
-	<form method="post">
-		{% csrf_token %}
-		<p class="centralizado afastarTopo2">Usuário:</p>
-		<p class="centralizado">{{form.username | add_class:"borda"}}</p>
-		<p class="centralizado afastarTopo2">Senha:</p>
-		<p class="centralizado">{{form.password1 | add_class:"borda"}}</p>
-		<p class="centralizado afastarTopo2">Repita a senha:</p>
-		<p class="centralizado">{{form.password2 | add_class:"borda"}}</p>
-		<p class="centralizado afastarTopo2 afastarBaixo"><button type="submit" class="botiones"> Cadastrar </button></p>
-	</form>
+	<div class="row">
+		{# ----------------------------------------------------------------------------- #}
+		<div class="col-md-6 col-lg-6">
+			<h1 class="centralizado2 afastarTopo3">Atenção!</h1>
+			<ul class="centralizado	">
+				<li class="listaSenha">Sua senha não deve ser parecida com seu nome de usuário</li>
+				<li class="listaSenha">Sua senha deve conter ao menos 8 caracteres</li>
+				<li class="listaSenha">Sua senha não pode conter entradas numéricas</li>
+			</ul>
+
+		</div>
+		{# ----------------------------------------------------------------------------- #}
+		<div class="col-md-6 col-lg-6">
+			<h1 class="centralizado2 afastarTopo">Cadastre-se</h1>
+			<form method="post">
+				{% csrf_token %}
+				<p class="centralizado afastarTopo2">Usuário:</p>
+				<p class="centralizado">{{form.username | add_class:"borda"}}</p>
+				<p class="centralizado afastarTopo2">Senha:</p>
+				<p class="centralizado">{{form.password1 | add_class:"borda"}}</p>
+				<p class="centralizado afastarTopo2">Repita a senha:</p>
+				<p class="centralizado">{{form.password2 | add_class:"borda"}}</p>
+				<p class="centralizado afastarTopo2 afastarBaixo">
+					<button type="submit" class="botiones"> Cadastrar </button>
+				</p>
+			</form>
+		</div>
+	</div>
 </div>
 {% endblock conteudo %}
