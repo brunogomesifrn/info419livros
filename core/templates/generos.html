@@ -32,6 +32,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	color: black;
 }
 
+.outroTexto2{
+	font-family: Ubuntu;
+	text-align: left;
+	font-weight: bolder;
+	font-size: 20px;
+	color: black;
+	margin-top: 15px;
+}
+
 .centro {
 	text-align: center;
 }
@@ -84,6 +93,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	font-weight: bold;
 	font-size: 25px;
 	color: white;
+	transition: 0.5s
 }
 
 .cadastrar:hover{
@@ -100,6 +110,10 @@ h1{
 	text-align: left;
 }
 
+.direita{
+	text-align: right
+}
+
 </style>
 
 <div class="container baixar">
@@ -108,32 +122,52 @@ h1{
 			{% if lista_generos %}
 			<h1> Gêneros </h1>
 			{% endif %}
-			{% for genero in lista_generos %}
 
-			<p class="genero">
-				{{ genero.genero }}
-				<a href="{% url 'genero_editar' genero.id %}" class="pEditar">
-					<button type="button" class="botao">Editar</button>
-				</a>
-				<a href="{% url 'genero_remover' genero.id %}" class="pEditar2">
-					<button type="button" class="botao">Excluir</button>
-				</a>
-			</p>
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">
+							<p class="outroTexto2">Gênero</p>
+						</th>
+						<th scope="col">
+							<p class="outroTexto2 direita">Gerenciar</p>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for genero in lista_generos %}
+					<tr>
+						<th>
+							<p class="genero">
+								{{ genero.genero }}
+							</p>
+						</th>
+						<td class="direita"><a href="{% url 'genero_editar' genero.id %}" class="">
+							<button type="button" class="botao">Editar</button>
+						</a>
+						<a href="{% url 'genero_remover' genero.id %}" class="">
+							<button type="button" class="botao">Excluir</button>
+						</a>
+					</td>
+				</tr>
+			</tbody>
 
 			{% empty %}
 
 			<h2 class="outroTexto"> Nenhum gênero cadastrado </h2>
 
 			{% endfor %}
-		</div>
-		<div class="col-md-3 col-lg-3 baixar">
-			<p class="botao">
-				<a href="{% url 'genero_cadastrar' %}">
-					<button type="button" class="cadastrar">Cadastrar Gênero</button>
-				</a>
-			</p>
-		</div>
+		</table>
+
 	</div>
+	<div class="col-md-3 col-lg-3 baixar">
+		<p class="botao">
+			<a href="{% url 'genero_cadastrar' %}">
+				<button type="button" class="cadastrar">Cadastrar Gênero</button>
+			</a>
+		</p>
+	</div>
+</div>
 </div>
 
 <p class="baixar"></p>

@@ -8,7 +8,7 @@
 {% block conteudo %}
 
 <style type="text/css">
-	
+
 .texto {
 	font-family: Ubuntu;
 	text-align: center;
@@ -23,6 +23,15 @@
 	font-weight: bolder;
 	font-size: 25px;
 	color: black;
+}
+
+.outroTexto2{
+	font-family: Ubuntu;
+	text-align: left;
+	font-weight: bolder;
+	font-size: 20px;
+	color: black;
+	margin-top: 15px;
 }
 
 .centro {
@@ -50,10 +59,6 @@
 	margin-top: 15px;
 }
 
-.pEditar{
-	margin-left: 400px
-}
-
 .pEditar2{
 	margin-left: 10px
 }
@@ -77,6 +82,7 @@
 	font-weight: bold;
 	font-size: 25px;
 	color: white;
+	transition: 0.5s;
 }
 
 .cadastrar:hover{
@@ -93,44 +99,63 @@ h1{
 	text-align: left;
 }
 
-</style>	
+.direita{
+	text-align: right;
+}
+
+</style>
 
 <div class="container baixar">
-	<div class="row separador"> 	
+	<div class="row separador">
 		<div class="col-md-9 cart-total">
 			{% if lista_livros %}
-		  	<h1> Livros </h1>
-		  	{% endif %}
-			{% for livro in lista_livros %}
-			
-			<p class="livro">
-				{{ livro.titulo }} 
-				 
-				<a href="{% url 'livro_editar' livro.id %}" class="pEditar">
-				 	<button type="button" class="botao">Editar</button></a>
-
-				<a href="{% url 'livro_remover' livro.id %}" class="pEditar2">
-				 	<button type="button" class="botao">Excluir</button></a>
-			</p>
-
-			{% empty %}
-			 
-			<h2 class="outroTexto"> Nenhum livro cadastrado </h2>
+			<h1> Livros </h1>
+			{% endif %}
 
 
-			 {% endfor %}
-		</div>
-		<div class="col-md-3 col-lg-3 baixar">
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col"><p class="outroTexto2">Título</p></th>
+						<th scope="col"><p class="outroTexto2 direita">Gerenciar</p></th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for livro in lista_livros %}
+					<tr>
+						<th>
+							<p class="livro">
+								{{ livro.titulo }}
+							</p>
+						</th>
+						<td class="direita"><a href="{% url 'livro_editar' livro.id %}" class="pEditar">
+							<button type="button" class="botao">Editar</button></a>
+
+							<a href="{% url 'livro_remover' livro.id %}" class="pEditar2">
+								<button type="button" class="botao">Excluir</button></a>
+							</td>
+						</tr>
+					</tbody>
+
+					{% empty %}
+
+					<h2 class="outroTexto"> Nenhum livro cadastrado </h2>
+
+
+					{% endfor %}
+				</table>
+			</div>
+			<div class="col-md-3 col-lg-3 baixar">
 				<p class="botao">
 					<a href="{% url 'livro_cadastrar' %}">
 						<button type="button" class="cadastrar">Cadastrar Livro</button></a>
-				</p>
-			
+					</p>
+
+				</div>
+			</div>
 		</div>
-	</div>
-</div>
 
-<p class="baixar"></p>
+		<p class="baixar"></p>
 
 
-{% endblock %}
+		{% endblock %}
