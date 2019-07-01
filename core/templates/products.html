@@ -52,7 +52,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		{% for livro in lista_livros %}
 		<div class="col-md-3">
 			<p class="centralizado">
-				<a href="{% url 'livro_detalhes' %}">
+				<a href="{% url 'livro_detalhes' livro.id %}">
 					<img src="/media/{{ livro.capa }}" alt="Imagem" width="150px" height="200px">
 				</a>
 			</p>

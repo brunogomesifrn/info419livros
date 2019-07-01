@@ -56,7 +56,12 @@ def produtos(request):
 
 	return render(request, 'products.html', contexto)
 
-def livro_detalhes(request):
+def livro_detalhes(request, id):
+	livros = Livro.objects.get(pk=id)
+	contexto = {
+		'lista_livros': livros
+	}
+
 	return render(request, 'single.html')
 
 def genero_cadastrar(request):
