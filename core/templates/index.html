@@ -35,32 +35,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script src="{% static 'js/simpleCart.min.js' %}"> </script>
 
 	<style type="text/css">
-		.tamanho {
-			height: 350px 
+	.tamanho {
+		height: 350px
 
-		}
+	}
 
-		.tamanho2 {
-			height: 429px;
-			width: 600px
-		}
+	.tamanho2 {
+		height: 429px;
+		width: 600px
+	}
 
-		.tamanho3 {
-			height: 196px;
-			width: 255px;
-		}
+	.tamanho3 {
+		height: 196px;
+		width: 255px;
+	}
 
-		.tamanho4 {
-			height: 190px;
-			width: 600px
-		}
+	.tamanho4 {
+		height: 190px;
+		width: 600px
+	}
 
-		.tamanho5 {
-			width: 200px;
-			height: 150px;
-		}
-
-		
+	.tamanho5 {
+		width: 200px;
+		height: 150px;
+	}
 
 	</style>
 
@@ -81,16 +79,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<ul>
 						{% if not user.is_authenticated %}
 						<li><a href="{% url 'login' %}">Login</a></li>
-						{% endif %}
-						{% if not user.is_authenticated %}
 						<li><a  href="{% url 'cadastrar' %}">Cadastro</a></li>
+						{% endif %}
+
+						{% if user.is_authenticated %}
+						<li><a  href="{% url 'logout' %}">Sair</a></li>
 						{% endif %}
 					</ul>
 
 					<div class="cart box_1">
 						<a href="{% url 'produtos' %}">
-							<h3> <div class="total">
-								Livros</div>
+							<h3>
+								<div class="total">Livros</div>
 							</h3>
 						</a>
 
@@ -147,7 +147,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										</div>
 									</div>
 									<div class="col1">
-										
+
 									</div>
 								</div>
 							</div>
@@ -190,7 +190,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										</div>
 									</div>
 									<div class="col1">
-										
+
 									</div>
 								</div>
 							</div>
@@ -282,7 +282,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								</h3>
 							</div>
 						</a>
-						
+
 					</div>
 					<div class="col-md-4 grid-top">
 						<a href="#" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive tamanho" src="{% static 'images/acao.jpg' %}" alt="">
@@ -292,7 +292,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								</h3>
 							</div>
 						</a>
-						
+
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -305,7 +305,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								</h3>
 							</div>
 						</a>
-						
+
 					</div>
 					<div class="col-md-4 grid-top">
 						<a href="#" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive tamanho" src="{% static 'images/terror.jpg' %}" alt="">
@@ -315,7 +315,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								</h3>
 							</div>
 						</a>
-						
+
 					</div>
 					<div class="col-md-4 grid-top">
 						<a href="#" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive tamanho" src="{% static 'images/ficcaocientifica.jpg' %}" alt="">
@@ -325,7 +325,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								</h3>
 							</div>
 						</a>
-						
+
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -431,17 +431,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="col-md-4 amet-sed">
 						<h4>SE INSCREVA</h4>
 						<p>Inscreva-se para receber todas as novidades e promoções</p>
-							<form>
-								<input type="text" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
-								<input type="submit" value="Sign up">
-							</form>
-						</div>
-						<div class="clearfix"> </div>
+						<form>
+							<input type="text" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+							<input type="submit" value="Sign up">
+						</form>
 					</div>
-				</div>
-				<div class="footer-class">
-					<p >© 2019 Todos os Direitos Reservados | Desenvolvido por Eduarda Alcântara, Semaias Rangel e Alexandra Marcelino </p>
+					<div class="clearfix"> </div>
 				</div>
 			</div>
-		</body>
-		</html>
+			<div class="footer-class">
+				<p >© 2019 Todos os Direitos Reservados | Desenvolvido por Eduarda Alcântara, Semaias Rangel e Alexandra Marcelino </p>
+			</div>
+		</div>
+	</body>
+	</html>
