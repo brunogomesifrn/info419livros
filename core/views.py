@@ -58,11 +58,12 @@ def produtos(request):
 
 def livro_detalhes(request, id):
 	livros = Livro.objects.get(pk=id)
+	generos = Genero.objects.get(pk=id)
 	contexto = {
-		'lista_livros': livros
+		'liv': livros,
+		'gen': generos
 	}
-
-	return render(request, 'single.html')
+	return render(request, 'single.html', contexto)
 
 def genero_cadastrar(request):
 	form = generoForm(request.POST or None, request.FILES or None)
