@@ -63,16 +63,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<h2 class="infoTit">Informações sobre o livro</h2>
 			<p class="infoTex">Título: <label class="infor"> {{ liv.titulo }} </label> </p>
 			<p class="infoTex">Autor: <label class="infor"> {{ liv.autor }} </label> </p>
-			<p class="infoTex">Gênero:
-				{% for i in liv.generoFK %}
-
-				<label class="infor"> {{ i.genero }} </label>	</p>
-
-				{% endfor %}
-				<p class="infoTex">ISBN: <label class="infor"> {{ liv.isbn }} </label> </p>
-				<p class="infoTex">Preço: <label class="infor"> {{ liv.preco }} </label> </p>
-			</div>
+			<p class="infoTex">Gênero: <label class="infor"> {{ gen.genero }} </label>	</p>
+			<p class="infoTex">ISBN: <label class="infor"> {{ liv.isbn }} </label> </p>
+			<p class="infoTex">Preço: <label class="infor"> {{ liv.preco }} </label> </p>
 		</div>
 	</div>
+</div>
 
-	{% endblock %}
+{% endblock %}
