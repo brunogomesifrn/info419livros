@@ -11,7 +11,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<title>New Store A Ecommerce Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+	<title>AlcMac Livros</title>
+	<link rel="icon" href="{% static 'images/logo3.png' %}" type="image/x-icon" />
 	<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
 	<link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}"/>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -60,6 +61,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		height: 150px;
 	}
 
+	.cor {
+		color: black;
+		font-weight: 900;
+		font-style: italic
+	}
+
+	.cor2 {
+		color: #FF8C00
+	}
+
 	</style>
 
 </head>
@@ -104,7 +115,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container">
 			<div class="head-top">
 				<div class="logo">
-					<a href="{% url 'inicial' %}"><img src="{% static 'images/logo.png' %}" alt=""></a>
+					<a href="{% url 'inicial' %}"><img src="{% static 'images/logo3.png' %}" alt="Logo" width="100px" height="50px"></a>
 				</div>
 				<div class=" h_menu4">
 					<ul class="memenu skyblue">
@@ -227,8 +238,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<li>
 
 						<div class="banner-text">
-							<h3>Encontre os melhores livros </h3>
-							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor .</p>
+							<h3 class="cor2">Encontre os melhores livros </h3>
+							<p class="cor">Encontre os livros mais lidos e falados aqui. E aí, vai perder tempo? Confira abaixo.</p>
 							<a href="#">Leia Mais</a>
 						</div>
 
@@ -236,8 +247,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<li>
 
 						<div class="banner-text">
-							<h3> Com os melhores preços </h3>
-							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor .</p>
+							<h3 class="cor2"> Com os melhores preços </h3>
+							<p class="cor">Só aqui você encontra os livros mais lidos e comentados com um preço muito baixo.</p>
 							<a href="#">Leia Mais</a>
 
 						</div>
@@ -245,8 +256,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</li>
 					<li>
 						<div class="banner-text">
-							<h3>Sed ut perspiciatis unde omnis</h3>
-							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor .</p>
+							<h3 class="cor2">Os preços que só a AlcMac Livros tem</h3>
+							<p class="cor">A AlcMac Livros possui uma grande variedade de livros. Livros e preços que cabem no seu bolso.</p>
 							<a href="#">Leia Mais</a>
 
 						</div>
@@ -262,7 +273,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="content">
 		<div class="container">
 			<div class="content-top">
-				<h1>GÊNEROS</h1>
+				<h1>ENCONTRE SEUS GÊNEROS PREFERIDOS</h1>
 				<div class="grid-in">
 					<div class="col-md-4 grid-top">
 						<a href="#" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive tamanho" src="{% static 'images/pi.jpg' %}" alt="">
@@ -333,7 +344,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<!----->
 
 			<div class="content-top-bottom">
-				<h2>AUTORES</h2>
+				<h2>ENCONTRE SEUS AUTORES PREFERIDOS</h2>
 				<div class="col-md-6 men">
 					<a href="#" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive tamanho2" src="{% static 'images/autora1.jpg' %}" alt="">
 						<div class="b-wrapper">
